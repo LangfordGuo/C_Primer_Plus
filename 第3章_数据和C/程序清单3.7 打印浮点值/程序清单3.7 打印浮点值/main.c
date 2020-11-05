@@ -4,6 +4,7 @@
 //
 //  Created by 郭龙飞 on 2020/11/4.
 //
+// git pull --progress -v --no-rebase "ssh://***i.git" br***_master
 
 #include <stdio.h>
 
