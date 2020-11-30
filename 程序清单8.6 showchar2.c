@@ -1,10 +1,11 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 void display(char cr, int lines, int width);
 int main()
 {
     int ch; //待打印的临时字符
     int rows, cols;
+    system("chcp 65001");
     printf("请输入一个字符，及行数和列数:\n");
     while ((ch = getchar()) != '\n')
     {
@@ -14,14 +15,15 @@ int main()
         {
             printf("scanf的返回值不是2，终止程序！\n");
             break;
-        }            
+        }
         while (getchar() != '\n')
         {
-            //printf("程序正在跳过回车\n");
+            printf("程序正在跳过回车\n");
             continue;
         }
+       display(ch, rows, cols);
         printf("请输入另外一个字符，及行数和列数(或者按下回车结束本程序):\n");
-        display(ch, rows, cols);
+        
     }
     printf("Bye.\n");
     return 0;
